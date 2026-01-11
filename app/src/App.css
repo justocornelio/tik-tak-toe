@@ -1,0 +1,87 @@
+/* Fondo suave */
+.ttt-bg{
+  background: radial-gradient(800px 400px at 20% 10%, rgba(13,110,253,.15), transparent 60%),
+              radial-gradient(800px 400px at 85% 20%, rgba(25,135,84,.12), transparent 60%),
+              linear-gradient(180deg, #ffffff 0%, #f6f8ff 55%, #eef2ff 100%);
+}
+
+/* Hero del card */
+.ttt-hero{
+  background: linear-gradient(90deg, #0b1b3a, #123a7a);
+}
+
+/* Mini tarjeta de stats */
+.ttt-stat{
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 14px;
+  padding: 10px;
+  background: rgba(255,255,255,.85);
+}
+
+/* colores (como utilidad) */
+.ttt-c-primary{ color: #0d6efd; }
+.ttt-c-danger{ color: #dc3545; }
+.ttt-c-cyan{ color: #0dcaf0; }
+
+/* TABLERO: grid 3x3 */
+.ttt-board{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: min(320px, 100%);
+}
+
+/* CELDAS: no letras gigantes */
+.ttt-cell{
+  aspect-ratio: 1 / 1;
+  border-radius: 16px !important;
+  border: 1px solid rgba(0,0,0,.10) !important;
+  background: #fff !important;
+
+  display: grid !important;
+  place-items: center !important;
+
+  font-weight: 800 !important;
+  font-size: 1.55rem !important;   /* <- aquí controlas tamaño */
+  line-height: 1 !important;
+
+  transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.ttt-cell:hover:enabled{
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(0,0,0,.10);
+  border-color: rgba(13,110,253,.35) !important;
+}
+
+.ttt-cell:disabled{
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+/* estilos por símbolo */
+.ttt-x{
+  color: #0d6efd !important;
+  background: rgba(13,110,253,.07) !important;
+}
+
+.ttt-o{
+  color: #dc3545 !important;
+  background: rgba(220,53,69,.07) !important;
+}
+
+.ttt-empty{
+  color: transparent !important;
+}
+
+/* highlight ganador */
+.ttt-win{
+  border-color: rgba(255,193,7,.75) !important;
+  box-shadow: 0 0 0 4px rgba(255,193,7,.18), 0 18px 35px rgba(0,0,0,.12) !important;
+}
+
+/* responsive: tablero un poco más pequeño */
+@media (max-width: 420px){
+  .ttt-board{ width: min(290px, 100%); }
+  .ttt-cell{ font-size: 1.35rem !important; }
+}
