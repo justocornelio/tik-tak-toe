@@ -1,5 +1,5 @@
 {
-  "name": "app",
+  "name": "tic-tac-toe-game",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "vercel-build": "vite build"  
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
