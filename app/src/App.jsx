@@ -529,7 +529,7 @@ function App() {
               </div>
             </div>
 
-            {/* Difficulty Info */}
+            {/* Difficulty */}
             <div className="ttt-card">
               <div className="ttt-card-header">
                 <h2 className="ttt-card-title">Dificultad</h2>
